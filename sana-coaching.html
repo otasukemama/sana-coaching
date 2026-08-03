@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>悩めるママのための潜在意識コーチング | Sana</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF6F0;
+    --warm-white: #FFFDF9;
+    --blush: #F2E4D8;
+    --dusty-rose: #C9957A;
+    --deep-rose: #9B6B52;
+    --sage: #8A9E8C;
+    --deep-sage: #5C7A60;
+    --charcoal: #2C2C2C;
+    --mid-gray: #6B6B6B;
+    --light-gray: #B0A89E;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  /* ナビ */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 18px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(250, 246, 240, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(201,149,122,0.15);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 300; font-style: italic;
+    color: var(--deep-rose); letter-spacing: 0.08em;
+  }
+  .nav-links {
+    display: flex; gap: 36px; list-style: none;
+  }
+  .nav-links a {
+    font-size: 12px; letter-spacing: 0.18em;
+    color: var(--mid-gray); text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--deep-rose); }
+
+  /* ヒーロー */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 120px 48px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 55%; height: 100%;
+    background: radial-gradient(ellipse at 70% 40%, rgba(242,228,216,0.6) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: -2px; left: 0; right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent, var(--cream));
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1100px; margin: 0 auto; width: 100%;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  }
+  .hero-text {}
+  .hero-eyebrow {
+    font-size: 11px; letter-spacing: 0.28em;
+    color: var(--dusty-rose); margin-bottom: 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 32px; height: 1px; background: var(--dusty-rose);
+  }
+  .hero-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 300; line-height: 1.5;
+    color: var(--charcoal); margin-bottom: 12px;
+    letter-spacing: 0.05em;
+  }
+  .hero-title em {
+    font-style: normal; color: var(--deep-rose);
+  }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; font-weight: 300; font-style: italic;
+    color: var(--dusty-rose); margin-bottom: 28px;
+    letter-spacing: 0.05em;
+  }
+  .hero-desc {
+    font-size: 14px; color: var(--mid-gray);
+    line-height: 2; margin-bottom: 40px; max-width: 420px;
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 16px 40px;
+    background: var(--deep-rose);
+    color: white; font-size: 13px;
+    letter-spacing: 0.18em; text-decoration: none;
+    border-radius: 40px;
+    transition: all 0.3s;
+  }
+  .btn-primary:hover {
+    background: var(--dusty-rose);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(155,107,82,0.25);
+  }
+  .btn-outline {
+    display: inline-block;
+    padding: 15px 36px;
+    border: 1px solid var(--dusty-rose);
+    color: var(--dusty-rose); font-size: 13px;
+    letter-spacing: 0.18em; text-decoration: none;
+    border-radius: 40px; margin-left: 16px;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover {
+    background: var(--blush);
+  }
+
+  /* ヒーロー右側の装飾 */
+  .hero-visual {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 20px; position: relative;
+  }
+  .hero-circle {
+    width: 320px; height: 320px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--blush), rgba(138,158,140,0.2));
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .hero-circle::before {
+    content: '';
+    position: absolute; inset: -12px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,149,122,0.25);
+  }
+  .hero-circle-inner {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px; font-weight: 300;
+    color: var(--deep-rose); text-align: center;
+    line-height: 2.2; letter-spacing: 0.1em;
+  }
+  .hero-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px; font-style: italic;
+    color: var(--mid-gray); text-align: center;
+    max-width: 260px; line-height: 1.8;
+  }
+
+  /* セクション共通 */
+  section { padding: 100px 48px; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow {
+    font-size: 10px; letter-spacing: 0.3em;
+    color: var(--dusty-rose); margin-bottom: 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-eyebrow::before {
+    content: ''; width: 24px; height: 1px; background: var(--dusty-rose);
+  }
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 300; line-height: 1.6;
+    color: var(--charcoal); margin-bottom: 48px;
+    letter-spacing: 0.05em;
+  }
+
+  /* こんな悩みはありませんか */
+  .worries {
+    background: var(--warm-white);
+  }
+  .worries-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+  }
+  .worry-item {
+    background: var(--cream);
+    border-radius: 12px; padding: 24px 28px;
+    display: flex; gap: 14px; align-items: flex-start;
+    border-left: 3px solid var(--blush);
+    transition: all 0.3s;
+  }
+  .worry-item:hover {
+    border-left-color: var(--dusty-rose);
+    transform: translateX(4px);
+  }
+  .worry-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .worry-text { font-size: 14px; color: var(--mid-gray); line-height: 1.8; }
+  .worry-text strong { color: var(--charcoal); font-weight: 500; }
+
+  /* 潜在意識とは */
+  .about-subconscious {
+    background: var(--cream);
+  }
+  .about-layout {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  }
+  .iceberg {
+    display: flex; flex-direction: column; align-items: center; gap: 0;
+    position: relative;
+  }
+  .iceberg-top {
+    width: 160px; height: 80px;
+    background: linear-gradient(135deg, var(--dusty-rose), var(--deep-rose));
+    border-radius: 12px 12px 0 0;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 13px; letter-spacing: 0.1em;
+    font-family: 'Noto Serif JP', serif;
+  }
+  .iceberg-water {
+    width: 200px; height: 2px;
+    background: rgba(138,158,140,0.4);
+    position: relative;
+  }
+  .iceberg-water::before {
+    content: '〜〜〜〜〜〜〜〜〜';
+    position: absolute; top: -8px; left: 50%; transform: translateX(-50%);
+    color: var(--sage); font-size: 12px; white-space: nowrap;
+    letter-spacing: 2px;
+  }
+  .iceberg-bottom {
+    width: 280px; height: 180px;
+    background: linear-gradient(135deg, rgba(138,158,140,0.3), rgba(92,122,96,0.3));
+    border-radius: 0 0 50% 50%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 6px;
+    color: var(--deep-sage); font-size: 12px; text-align: center;
+    padding: 20px;
+  }
+  .iceberg-bottom strong {
+    font-size: 15px; font-family: 'Noto Serif JP', serif;
+    font-weight: 400; letter-spacing: 0.1em;
+  }
+  .about-text p {
+    font-size: 14px; color: var(--mid-gray);
+    line-height: 2.1; margin-bottom: 20px;
+  }
+  .about-text p strong { color: var(--charcoal); font-weight: 500; }
+
+  /* Sanaについて */
+  .about-sana {
+    background: var(--warm-white);
+  }
+  .about-sana-layout {
+    display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start;
+  }
+  .sana-portrait {
+    width: 100%; aspect-ratio: 3/4;
+    background: linear-gradient(160deg, var(--blush), rgba(138,158,140,0.2));
+    border-radius: 120px 120px 60px 60px;
+    display: flex; align-items: flex-end; justify-content: center;
+    overflow: hidden; position: relative;
+  }
+  .sana-portrait::after {
+    content: 'Sana';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px; font-style: italic; font-weight: 300;
+    color: rgba(155,107,82,0.3);
+    position: absolute; bottom: 24px;
+  }
+  .sana-intro {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px; font-weight: 300;
+    color: var(--charcoal); line-height: 1.7;
+    margin-bottom: 24px; letter-spacing: 0.05em;
+  }
+  .sana-desc {
+    font-size: 14px; color: var(--mid-gray);
+    line-height: 2.1; margin-bottom: 16px;
+  }
+  .sana-tags {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px;
+  }
+  .sana-tag {
+    padding: 6px 16px;
+    border: 1px solid rgba(201,149,122,0.3);
+    border-radius: 20px; font-size: 12px;
+    color: var(--dusty-rose); letter-spacing: 0.1em;
+  }
+
+  /* セッションの流れ */
+  .process {
+    background: var(--cream);
+  }
+  .process-steps {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    position: relative;
+  }
+  .process-steps::before {
+    content: '';
+    position: absolute; top: 36px; left: 10%; right: 10%;
+    height: 1px; background: linear-gradient(to right, transparent, var(--dusty-rose), transparent);
+  }
+  .process-step { text-align: center; position: relative; z-index: 1; }
+  .step-num {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: var(--warm-white);
+    border: 1px solid rgba(201,149,122,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 300; font-style: italic;
+    color: var(--dusty-rose);
+    transition: all 0.3s;
+  }
+  .process-step:hover .step-num {
+    background: var(--dusty-rose); color: white;
+    border-color: var(--dusty-rose);
+  }
+  .step-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px; font-weight: 400;
+    color: var(--charcoal); margin-bottom: 10px;
+  }
+  .step-desc {
+    font-size: 12px; color: var(--mid-gray); line-height: 1.9;
+  }
+
+  /* お客様の声 */
+  .testimonials { background: var(--warm-white); }
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .testimonial {
+    background: var(--cream);
+    border-radius: 16px; padding: 32px 28px;
+    position: relative;
+  }
+  .testimonial::before {
+    content: '\201C';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px; font-style: italic;
+    color: var(--blush);
+    position: absolute; top: 8px; left: 20px;
+    line-height: 1;
+  }
+  .testimonial-text {
+    font-size: 13px; color: var(--mid-gray);
+    line-height: 2; margin-bottom: 20px; padding-top: 24px;
+  }
+  .testimonial-author {
+    font-size: 12px; color: var(--dusty-rose);
+    letter-spacing: 0.1em;
+  }
+
+  /* ブログ */
+  .blog { background: var(--cream); }
+  .blog-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .blog-card {
+    background: var(--warm-white);
+    border-radius: 12px; overflow: hidden;
+    transition: all 0.3s;
+    text-decoration: none; color: inherit;
+  }
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  }
+  .blog-thumb {
+    height: 160px;
+    background: linear-gradient(135deg, var(--blush), rgba(138,158,140,0.3));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 36px;
+  }
+  .blog-body { padding: 24px; }
+  .blog-tag {
+    font-size: 10px; letter-spacing: 0.2em;
+    color: var(--dusty-rose); margin-bottom: 10px;
+  }
+  .blog-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px; font-weight: 400;
+    color: var(--charcoal); line-height: 1.7; margin-bottom: 10px;
+  }
+  .blog-excerpt {
+    font-size: 12px; color: var(--mid-gray); line-height: 1.9;
+  }
+
+  /* CTA */
+  .cta {
+    background: linear-gradient(135deg, var(--deep-rose), var(--dusty-rose));
+    text-align: center; padding: 100px 48px;
+  }
+  .cta-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(24px, 3vw, 40px);
+    font-weight: 300; color: white;
+    line-height: 1.6; margin-bottom: 20px;
+    letter-spacing: 0.05em;
+  }
+  .cta-desc {
+    font-size: 14px; color: rgba(255,255,255,0.85);
+    line-height: 2; margin-bottom: 40px;
+  }
+  .btn-white {
+    display: inline-block;
+    padding: 18px 48px;
+    background: white; color: var(--deep-rose);
+    font-size: 14px; letter-spacing: 0.18em;
+    text-decoration: none; border-radius: 40px;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  .btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+  }
+
+  /* フッター */
+  footer {
+    background: var(--charcoal);
+    padding: 60px 48px 40px;
+    color: rgba(255,255,255,0.5);
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 48px;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px; font-weight: 300; font-style: italic;
+    color: rgba(255,255,255,0.8); margin-bottom: 12px;
+  }
+  .footer-tagline {
+    font-size: 12px; letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.4);
+  }
+  .footer-links {
+    display: flex; gap: 32px; list-style: none;
+  }
+  .footer-links a {
+    font-size: 12px; letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.4); text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: rgba(255,255,255,0.8); }
+  .footer-copy {
+    max-width: 1100px; margin: 0 auto;
+    padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 11px; letter-spacing: 0.15em;
+  }
+
+  /* アニメーション */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-text > * {
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+  }
+  .hero-eyebrow { animation-delay: 0.1s; }
+  .hero-title { animation-delay: 0.25s; }
+  .hero-subtitle { animation-delay: 0.4s; }
+  .hero-desc { animation-delay: 0.5s; }
+  .hero-btns { animation-delay: 0.65s; }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    section { padding: 64px 24px; }
+    .hero { padding: 100px 24px 64px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+    .hero-visual { display: none; }
+    .worries-grid { grid-template-columns: 1fr; }
+    .about-layout { grid-template-columns: 1fr; }
+    .about-sana-layout { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; gap: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ナビ -->
+<nav>
+  <div class="nav-logo">Sana</div>
+  <ul class="nav-links">
+    <li><a href="#worries">こんな悩みに</a></li>
+    <li><a href="#about">潜在意識とは</a></li>
+    <li><a href="#sana">Sanaについて</a></li>
+    <li><a href="#process">セッション</a></li>
+    <li><a href="#blog">ブログ</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
+  </ul>
+</nav>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow">潜在意識コーチング</div>
+      <h1 class="hero-title">
+        <em>お母さんの心</em>が変わると、<br>
+        子どもの未来も<br>
+        輝きはじめる。
+      </h1>
+      <div class="hero-subtitle">When a mother's heart shifts, her child's world opens.</div>
+      <p class="hero-desc">
+        「なんでこんなに不安なんだろう」<br>
+        「いつも同じところで躓いてしまう」<br><br>
+        その繰り返しの奥に、あなたが気づいていない<br>
+        <strong>潜在意識の思い込み</strong>が眠っています。<br>
+        一緒に、その根っこを見つけに行きましょう。
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">無料相談を申し込む</a>
+        <a href="#about" class="btn-outline">もっと知る</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-circle">
+        <div class="hero-circle-inner">
+          気づき<br>
+          ✦<br>
+          手放し<br>
+          ✦<br>
+          前進
+        </div>
+      </div>
+      <div class="hero-quote">"The life you want is already within you."</div>
+    </div>
+  </div>
+</section>
+
+<!-- こんな悩みに -->
+<section class="worries" id="worries">
+  <div class="section-inner">
+    <div class="section-eyebrow">こんな悩みはありませんか</div>
+    <h2 class="section-title">あなたの「モヤモヤ」に、<br>名前をつけてみましょう。</h2>
+    <div class="worries-grid">
+      <div class="worry-item">
+        <div class="worry-icon">😔</div>
+        <div class="worry-text"><strong>子育てに自信が持てない</strong><br>「ちゃんとしたお母さんになれているのか」と毎日不安で、些細なことで落ち込んでしまう</div>
+      </div>
+      <div class="worry-item">
+        <div class="worry-icon">🌀</div>
+        <div class="worry-text"><strong>同じパターンを繰り返す</strong><br>頑張っているのに、なぜか毎回同じところでうまくいかなくなってしまう</div>
+      </div>
+      <div class="worry-item">
+        <div class="worry-icon">💔</div>
+        <div class="worry-text"><strong>夫婦関係がうまくいかない</strong><br>パートナーとの会話が噛み合わず、孤独を感じる。変えたいのに変えられない</div>
+      </div>
+      <div class="worry-item">
+        <div class="worry-icon">🌿</div>
+        <div class="worry-text"><strong>自分のやりたいことがわからない</strong><br>子育て優先で後回しにしてきた「自分」を、もう一度取り戻したい</div>
+      </div>
+      <div class="worry-item">
+        <div class="worry-icon">😤</div>
+        <div class="worry-text"><strong>感情のコントロールが難しい</strong><br>子どもに怒鳴ってしまった後の罪悪感。「こんなはずじゃなかった」と自己嫌悪</div>
+      </div>
+      <div class="worry-item">
+        <div class="worry-icon">✨</div>
+        <div class="worry-text"><strong>夢はあるけど一歩が踏み出せない</strong><br>「いつかやってみたい」はあるのに、なにかが引っかかって前に進めない</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 潜在意識とは -->
+<section class="about-subconscious" id="about">
+  <div class="section-inner">
+    <div class="about-layout">
+      <div>
+        <div class="section-eyebrow">潜在意識とは</div>
+        <h2 class="section-title" style="margin-bottom: 28px;">あなたの行動の<br>95%を決めているもの。</h2>
+        <div class="iceberg">
+          <div class="iceberg-top">顕在意識（5%）</div>
+          <div class="iceberg-water"></div>
+          <div class="iceberg-bottom">
+            <strong>潜在意識（95%）</strong>
+            <span style="font-size:11px; opacity:0.8;">幼少期の記憶・思い込み<br>感情パターン・信念・価値観</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p>
+          私たちが「自分で考えて決めている」と思っている行動や感情の多くは、実は<strong>幼い頃に無意識に学習した思い込みやパターン</strong>から生まれています。
+        </p>
+        <p>
+          「私はどうせダメだ」「愛されるためには頑張り続けなければ」「人に迷惑をかけてはいけない」——そんな声が、あなたの心の奥で静かに響いていませんか？
+        </p>
+        <p>
+          潜在意識コーチングでは、この<strong>「見えない思い込み」を一緒に探し、光を当て</strong>ていきます。気づくことで、手放すことができる。手放すことで、新しい選択ができる。
+        </p>
+        <p>
+          そしてお母さんが変わると、そのエネルギーは必ず子どもたちに伝わります。<strong>自由に自己実現できる子どもを育てる</strong>ために、まずお母さん自身が変わることが一番の近道なのです。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sanaについて -->
+<section class="about-sana" id="sana">
+  <div class="section-inner">
+    <div class="section-eyebrow">コーチについて</div>
+    <div class="about-sana-layout">
+      <div class="sana-portrait"></div>
+      <div>
+        <div class="sana-intro">
+          「あなたの答えは、<br>いつもあなたの中にある」
+        </div>
+        <p class="sana-desc">
+          はじめまして、Sanaです。
+        </p>
+        <p class="sana-desc">
+          私自身も、子育てをしながら「なぜか前に進めない」「同じことで悩み続ける」という経験をしてきました。たくさんの本を読み、セミナーに参加しても、何かが変わらない——そんな時に出会ったのが潜在意識の世界でした。
+        </p>
+        <p class="sana-desc">
+          表面的な悩みではなく、その<strong>根っこにある思い込み</strong>に気づいたとき、人は自然と変わっていきます。私はその「気づき」のプロセスを、安心できる場所でご一緒したいと思っています。
+        </p>
+        <p class="sana-desc">
+          お母さんが自分を大切にし、自分の夢に正直になることが、子どもたちへの最高のギフトになると信じています。
+        </p>
+        <div class="sana-tags">
+          <span class="sana-tag">潜在意識コーチング</span>
+          <span class="sana-tag">マインドセット</span>
+          <span class="sana-tag">子育て支援</span>
+          <span class="sana-tag">自己実現</span>
+          <span class="sana-tag">家族関係</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- セッションの流れ -->
+<section class="process" id="process">
+  <div class="section-inner">
+    <div class="section-eyebrow">セッションの流れ</div>
+    <h2 class="section-title">安心して、一歩ずつ。</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <div class="step-title">無料相談</div>
+        <div class="step-desc">30分のオンライン面談。今の悩みや状況をお聞かせください。プレッシャーなく、お気軽に。</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <div class="step-title">思い込みの特定</div>
+        <div class="step-desc">悩みの奥にある潜在意識のパターンを、対話を通じて丁寧に探っていきます。</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <div class="step-title">気づきと手放し</div>
+        <div class="step-desc">「なぜそう感じてきたか」が見えると、自然と手放せるようになります。</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <div class="step-title">新しい自分へ</div>
+        <div class="step-desc">新しい思考パターンを育て、自分らしい選択ができる毎日へ。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- お客様の声 -->
+<section class="testimonials" id="testimonials">
+  <div class="section-inner">
+    <div class="section-eyebrow">お客様の声</div>
+    <h2 class="section-title">変化は、こんなふうに<br>やってきます。</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <p class="testimonial-text">
+          「また同じパターンだ」と気づくだけで、こんなに楽になれるとは思いませんでした。Sanaさんとの対話の中で、幼い頃から持っていた「頑張らないと愛されない」という思い込みに気づけたことが一番の転機でした。
+        </p>
+        <div class="testimonial-author">30代・2児のママ</div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">
+          子どもに怒鳴ってしまうことで自己嫌悪の繰り返しでした。でも、その怒りの奥に「認めてほしい」という気持ちがあると気づいてから、自分を責めることが減り、子どもへの言葉も変わってきました。
+        </p>
+        <div class="testimonial-author">40代・3児のママ</div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">
+          ずっと「自分には無理」と思っていたことを、セッションを通じて一つひとつ解きほぐしてもらいました。今では夢だった仕事を始めることができました。Sanaさんに出会えて本当によかったです。
+        </p>
+        <div class="testimonial-author">35代・1児のママ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ブログ -->
+<section class="blog" id="blog">
+  <div class="section-inner">
+    <div class="section-eyebrow">ブログ</div>
+    <h2 class="section-title">心のヒントを、<br>毎週お届けしています。</h2>
+    <div class="blog-grid">
+      <a href="#" class="blog-card">
+        <div class="blog-thumb">🌱</div>
+        <div class="blog-body">
+          <div class="blog-tag">潜在意識</div>
+          <div class="blog-title">「またやってしまった」の繰り返しが止まらない本当の理由</div>
+          <div class="blog-excerpt">同じパターンを繰り返してしまうのは、意志が弱いからではありません。潜在意識の仕組みを知ると、自分を責めずに済むようになります。</div>
+        </div>
+      </a>
+      <a href="#" class="blog-card">
+        <div class="blog-thumb">💕</div>
+        <div class="blog-body">
+          <div class="blog-tag">子育て</div>
+          <div class="blog-title">お母さんが自分を大切にすることが、最高の子育てになる理由</div>
+          <div class="blog-excerpt">「自分より子どもを優先しなきゃ」。その思い込み、少し手放してみませんか？ お母さんが満たされていると、子どもも変わります。</div>
+        </div>
+      </a>
+      <a href="#" class="blog-card">
+        <div class="blog-thumb">✨</div>
+        <div class="blog-body">
+          <div class="blog-tag">自己実現</div>
+          <div class="blog-title">「どうせ私には無理」という声の正体と、その手放し方</div>
+          <div class="blog-excerpt">夢を思い描くたびに聞こえてくる「でも…」という声。それはあなたの本音ではなく、幼い頃に学習したただの思い込みです。</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="cta-title">
+    まず、話してみませんか。<br>
+    <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300;">あなたの「モヤモヤ」を、一緒に解きほぐしましょう。</span>
+  </div>
+  <p class="cta-desc">
+    初回の無料相談は30分。オンライン（Zoom）で行います。<br>
+    「本当に私でも変われるのかな？」そんな気持ちのままで大丈夫です。
+  </p>
+  <a href="mailto:your@email.com" class="btn-white">無料相談を申し込む →</a>
+</section>
+
+<!-- フッター -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Sana</div>
+      <div class="footer-tagline">悩めるママのための潜在意識コーチング</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#worries">こんな悩みに</a></li>
+      <li><a href="#about">潜在意識とは</a></li>
+      <li><a href="#sana">Sanaについて</a></li>
+      <li><a href="#process">セッション</a></li>
+      <li><a href="#blog">ブログ</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">© 2026 Sana Coaching. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
