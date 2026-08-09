@@ -1,9 +1,13 @@
+
+
+
+Sana coaching · HTML
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>悩めるママのための潜在意識コーチング | Sana</title>
+<title>悩めるママのための潜在意識コーチング</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -18,11 +22,11 @@
     --mid-gray: #6B6B6B;
     --light-gray: #B0A89E;
   }
-
+ 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     font-family: 'Noto Sans JP', sans-serif;
     background: var(--cream);
@@ -30,7 +34,7 @@
     font-weight: 300;
     line-height: 1.8;
   }
-
+ 
   /* ナビ */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
@@ -42,10 +46,10 @@
     border-bottom: 1px solid rgba(201,149,122,0.15);
   }
   .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px; font-weight: 300; font-style: italic;
-    color: var(--deep-rose); letter-spacing: 0.08em;
+    display: flex; align-items: center;
   }
+  .nav-logo svg { display: block; width: 30px; height: 30px; }
+  .footer-logo svg { display: block; width: 34px; height: 34px; }
   .nav-links {
     display: flex; gap: 36px; list-style: none;
   }
@@ -55,7 +59,7 @@
     transition: color 0.3s;
   }
   .nav-links a:hover { color: var(--deep-rose); }
-
+ 
   /* ヒーロー */
   .hero {
     min-height: 100vh;
@@ -137,7 +141,7 @@
   .btn-outline:hover {
     background: var(--blush);
   }
-
+ 
   /* ヒーロー右側の装飾 */
   .hero-visual {
     display: flex; flex-direction: column; align-items: center;
@@ -167,7 +171,7 @@
     color: var(--mid-gray); text-align: center;
     max-width: 260px; line-height: 1.8;
   }
-
+ 
   /* セクション共通 */
   section { padding: 100px 48px; }
   .section-inner { max-width: 1100px; margin: 0 auto; }
@@ -186,7 +190,7 @@
     color: var(--charcoal); margin-bottom: 48px;
     letter-spacing: 0.05em;
   }
-
+ 
   /* こんな悩みはありませんか */
   .worries {
     background: var(--warm-white);
@@ -208,7 +212,7 @@
   .worry-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
   .worry-text { font-size: 14px; color: var(--mid-gray); line-height: 1.8; }
   .worry-text strong { color: var(--charcoal); font-weight: 500; }
-
+ 
   /* 潜在意識とは */
   .about-subconscious {
     background: var(--cream);
@@ -257,7 +261,7 @@
     line-height: 2.1; margin-bottom: 20px;
   }
   .about-text p strong { color: var(--charcoal); font-weight: 500; }
-
+ 
   /* Sanaについて */
   .about-sana {
     background: var(--warm-white);
@@ -272,13 +276,11 @@
     display: flex; align-items: flex-end; justify-content: center;
     overflow: hidden; position: relative;
   }
-  .sana-portrait::after {
-    content: 'Sana';
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px; font-style: italic; font-weight: 300;
-    color: rgba(155,107,82,0.3);
-    position: absolute; bottom: 24px;
+ 
+  .sana-portrait img {
+    width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;
   }
+ 
   .sana-intro {
     font-family: 'Noto Serif JP', serif;
     font-size: 22px; font-weight: 300;
@@ -298,13 +300,13 @@
     border-radius: 20px; font-size: 12px;
     color: var(--dusty-rose); letter-spacing: 0.1em;
   }
-
+ 
   /* セッションの流れ */
   .process {
     background: var(--cream);
   }
   .process-steps {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;
     position: relative;
   }
   .process-steps::before {
@@ -336,9 +338,9 @@
   .step-desc {
     font-size: 12px; color: var(--mid-gray); line-height: 1.9;
   }
-
+ 
   /* お客様の声 */
-  .testimonials { background: var(--warm-white); }
+  .testimonials { background: var(--cream); }
   .testimonials-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
   }
@@ -363,9 +365,53 @@
     font-size: 12px; color: var(--dusty-rose);
     letter-spacing: 0.1em;
   }
-
+ 
   /* ブログ */
-  .blog { background: var(--cream); }
+  .blog { background: var(--warm-white); }
+ 
+  /* 料金 */
+  .pricing { background: var(--warm-white); }
+  .pricing-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  }
+  .pricing-card {
+    background: var(--cream);
+    border-radius: 16px; padding: 40px 36px;
+    border: 1px solid rgba(201,149,122,0.15);
+    position: relative;
+    min-height: 260px;
+    display: flex; flex-direction: column; justify-content: center;
+    text-align: center;
+  }
+  .pricing-card.featured {
+    border: 1px solid var(--dusty-rose);
+  }
+  .pricing-badge {
+    display: inline-block; align-self: center;
+    font-size: 11px; letter-spacing: 0.15em;
+    color: white; background: var(--dusty-rose);
+    padding: 5px 14px; border-radius: 20px;
+    margin-bottom: 18px;
+  }
+  .pricing-name {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px; font-weight: 400;
+    color: var(--charcoal); margin-bottom: 14px;
+    letter-spacing: 0.05em;
+  }
+  .pricing-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px; font-weight: 400;
+    color: var(--deep-rose); margin-bottom: 4px;
+  }
+  .pricing-amount span {
+    font-size: 14px; font-family: 'Noto Sans JP', sans-serif;
+    color: var(--mid-gray); font-weight: 300;
+  }
+  .pricing-note {
+    font-size: 12px; color: var(--mid-gray);
+    line-height: 1.9; margin-top: 18px;
+  }
   .blog-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
   }
@@ -398,7 +444,7 @@
   .blog-excerpt {
     font-size: 12px; color: var(--mid-gray); line-height: 1.9;
   }
-
+ 
   /* CTA */
   .cta {
     background: linear-gradient(135deg, var(--deep-rose), var(--dusty-rose));
@@ -428,7 +474,7 @@
     transform: translateY(-2px);
     box-shadow: 0 12px 32px rgba(0,0,0,0.15);
   }
-
+ 
   /* フッター */
   footer {
     background: var(--charcoal);
@@ -441,8 +487,6 @@
     margin-bottom: 48px;
   }
   .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px; font-weight: 300; font-style: italic;
     color: rgba(255,255,255,0.8); margin-bottom: 12px;
   }
   .footer-tagline {
@@ -463,7 +507,7 @@
     padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08);
     font-size: 11px; letter-spacing: 0.15em;
   }
-
+ 
   /* アニメーション */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -478,7 +522,7 @@
   .hero-subtitle { animation-delay: 0.4s; }
   .hero-desc { animation-delay: 0.5s; }
   .hero-btns { animation-delay: 0.65s; }
-
+ 
   @media (max-width: 768px) {
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
@@ -497,27 +541,38 @@
 </style>
 </head>
 <body>
-
+ 
 <!-- ナビ -->
 <nav>
-  <div class="nav-logo">Sana</div>
+  <div class="nav-logo" style="color: var(--deep-rose);">
+    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1">
+      <circle cx="20" cy="20" r="8"/>
+      <circle cx="28" cy="20" r="8"/>
+      <circle cx="24" cy="26.93" r="8"/>
+      <circle cx="16" cy="26.93" r="8"/>
+      <circle cx="12" cy="20" r="8"/>
+      <circle cx="16" cy="13.07" r="8"/>
+      <circle cx="24" cy="13.07" r="8"/>
+    </svg>
+  </div>
   <ul class="nav-links">
     <li><a href="#worries">こんな悩みに</a></li>
     <li><a href="#about">潜在意識とは</a></li>
-    <li><a href="#sana">Sanaについて</a></li>
+    <li><a href="#sana">自己紹介</a></li>
     <li><a href="#process">セッション</a></li>
+    <li><a href="#pricing">料金</a></li>
     <li><a href="#blog">ブログ</a></li>
     <li><a href="#contact">お問い合わせ</a></li>
   </ul>
 </nav>
-
+ 
 <!-- ヒーロー -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
       <div class="hero-eyebrow">潜在意識コーチング</div>
       <h1 class="hero-title">
-        <em>お母さんの心</em>が変わると、<br>
+        <span style="white-space: nowrap;"><em>ママの心</em>が変わると、</span><br>
         子どもの未来も<br>
         輝きはじめる。
       </h1>
@@ -548,7 +603,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- こんな悩みに -->
 <section class="worries" id="worries">
   <div class="section-inner">
@@ -579,10 +634,26 @@
         <div class="worry-icon">✨</div>
         <div class="worry-text"><strong>夢はあるけど一歩が踏み出せない</strong><br>「いつかやってみたい」はあるのに、なにかが引っかかって前に進めない</div>
       </div>
+      <div class="worry-item">
+        <div class="worry-icon">🏫</div>
+        <div class="worry-text"><strong>子どもの不登校に悩んでいる</strong><br>「私の育て方が悪かったのかな」と自分を責めてしまう。どう向き合えばいいかわからず、ひとりで抱え込んでしまう</div>
+      </div>
+      <div class="worry-item">
+        <div class="worry-icon">📱</div>
+        <div class="worry-text"><strong>他のママと比べて落ち込んでしまう</strong><br>SNSで見る「ちゃんとしたママ」を見るたびに、自分だけができていない気がしてしまう</div>
+      </div>
+      <div class="worry-item">
+        <div class="worry-icon">🗣️</div>
+        <div class="worry-text"><strong>自分の意見が言えない</strong><br>本当は違うと思っても、我慢して周りに合わせてしまう</div>
+      </div>
+      <div class="worry-item">
+        <div class="worry-icon">📝</div>
+        <div class="worry-text"><strong>完璧を求めすぎてしまう</strong><br>「ちゃんとやらなきゃ」が強すぎて、常に気が休まらない</div>
+      </div>
     </div>
   </div>
 </section>
-
+ 
 <!-- 潜在意識とは -->
 <section class="about-subconscious" id="about">
   <div class="section-inner">
@@ -616,7 +687,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- Sanaについて -->
 <section class="about-sana" id="sana">
   <div class="section-inner">
@@ -628,13 +699,13 @@
           「あなたの答えは、<br>いつもあなたの中にある」
         </div>
         <p class="sana-desc">
-          はじめまして、Sanaです。
+          はじめまして、sanaと申します。
         </p>
         <p class="sana-desc">
           私自身も、子育てをしながら「なぜか前に進めない」「同じことで悩み続ける」という経験をしてきました。たくさんの本を読み、セミナーに参加しても、何かが変わらない——そんな時に出会ったのが潜在意識の世界でした。
         </p>
         <p class="sana-desc">
-          表面的な悩みではなく、その<strong>根っこにある思い込み</strong>に気づいたとき、人は自然と変わっていきます。私はその「気づき」のプロセスを、安心できる場所でご一緒したいと思っています。
+          表面的な悩みではなく、その<strong>根っこにある思い込み</strong>に気づき、そこから小さな一歩を行動に移していくことで、人は少しずつ変わっていきます。私はその「気づきと行動」のプロセスを、安心できる場所でご一緒したいと思っています。
         </p>
         <p class="sana-desc">
           お母さんが自分を大切にし、自分の夢に正直になることが、子どもたちへの最高のギフトになると信じています。
@@ -650,37 +721,63 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- セッションの流れ -->
 <section class="process" id="process">
   <div class="section-inner">
     <div class="section-eyebrow">セッションの流れ</div>
     <h2 class="section-title">安心して、一歩ずつ。</h2>
+    <p style="text-align:center; font-size:13px; color:var(--mid-gray); letter-spacing:0.05em; margin-bottom:40px;">すべてオンライン（Zoom）で行います。全国どこからでもご参加いただけます。</p>
     <div class="process-steps">
       <div class="process-step">
         <div class="step-num">1</div>
         <div class="step-title">無料相談</div>
-        <div class="step-desc">30分のオンライン面談。今の悩みや状況をお聞かせください。プレッシャーなく、お気軽に。</div>
+        <div class="step-desc">今のお悩みを簡単にお伺いし、セッションでどのようなことを行うのかをご説明します。所要時間はおよそ30分程度です。</div>
       </div>
       <div class="process-step">
         <div class="step-num">2</div>
+        <div class="step-title">ヒアリング</div>
+        <div class="step-desc">セッションの中で、今の状況やお悩みをじっくりお聞きします。</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
         <div class="step-title">思い込みの特定</div>
         <div class="step-desc">悩みの奥にある潜在意識のパターンを、対話を通じて丁寧に探っていきます。</div>
       </div>
       <div class="process-step">
-        <div class="step-num">3</div>
+        <div class="step-num">4</div>
         <div class="step-title">気づきと手放し</div>
         <div class="step-desc">「なぜそう感じてきたか」が見えると、自然と手放せるようになります。</div>
       </div>
       <div class="process-step">
-        <div class="step-num">4</div>
+        <div class="step-num">5</div>
         <div class="step-title">新しい自分へ</div>
         <div class="step-desc">新しい思考パターンを育て、自分らしい選択ができる毎日へ。</div>
       </div>
     </div>
   </div>
 </section>
-
+ 
+<!-- 料金 -->
+<section class="pricing" id="pricing">
+  <div class="section-inner">
+    <div class="section-eyebrow">料金</div>
+    <h2 class="section-title">料金について</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card featured">
+        <div class="pricing-badge">初回限定・10月末まで</div>
+        <div class="pricing-name">モニター価格</div>
+        <div class="pricing-amount">¥3,000</div>
+        <div class="pricing-note">10月末まで、初めてご利用いただく方は特別価格でセッションを受けていただけます。</div>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-name">通常価格</div>
+        <div class="pricing-amount">¥9,000</div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
 <!-- お客様の声 -->
 <section class="testimonials" id="testimonials">
   <div class="section-inner">
@@ -703,12 +800,12 @@
         <p class="testimonial-text">
           ずっと「自分には無理」と思っていたことを、セッションを通じて一つひとつ解きほぐしてもらいました。今では夢だった仕事を始めることができました。Sanaさんに出会えて本当によかったです。
         </p>
-        <div class="testimonial-author">35代・1児のママ</div>
+        <div class="testimonial-author">30代・1児のママ</div>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <!-- ブログ -->
 <section class="blog" id="blog">
   <div class="section-inner">
@@ -742,7 +839,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- CTA -->
 <section class="cta" id="contact">
   <div class="cta-title">
@@ -750,30 +847,43 @@
     <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300;">あなたの「モヤモヤ」を、一緒に解きほぐしましょう。</span>
   </div>
   <p class="cta-desc">
-    初回の無料相談は30分。オンライン（Zoom）で行います。<br>
+    初回の無料相談にぜひお気軽にお申込みください。所要時間はおよそ30分。オンライン（Zoom）で行います。<br>
     「本当に私でも変われるのかな？」そんな気持ちのままで大丈夫です。
   </p>
   <a href="mailto:sana.coaching23@gmail.com" class="btn-white">無料相談を申し込む →</a>
 </section>
-
+ 
 <!-- フッター -->
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-logo">Sana</div>
+      <div class="footer-logo">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1">
+          <circle cx="20" cy="20" r="8"/>
+          <circle cx="28" cy="20" r="8"/>
+          <circle cx="24" cy="26.93" r="8"/>
+          <circle cx="16" cy="26.93" r="8"/>
+          <circle cx="12" cy="20" r="8"/>
+          <circle cx="16" cy="13.07" r="8"/>
+          <circle cx="24" cy="13.07" r="8"/>
+        </svg>
+      </div>
       <div class="footer-tagline">悩めるママのための潜在意識コーチング</div>
     </div>
     <ul class="footer-links">
       <li><a href="#worries">こんな悩みに</a></li>
       <li><a href="#about">潜在意識とは</a></li>
-      <li><a href="#sana">Sanaについて</a></li>
+      <li><a href="#sana">自己紹介</a></li>
       <li><a href="#process">セッション</a></li>
+      <li><a href="#pricing">料金</a></li>
       <li><a href="#blog">ブログ</a></li>
       <li><a href="#contact">お問い合わせ</a></li>
     </ul>
   </div>
   <div class="footer-copy">© 2026 Sana Coaching. All rights reserved.</div>
 </footer>
-
+ 
 </body>
 </html>
+ 
+
