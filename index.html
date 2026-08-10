@@ -306,13 +306,14 @@ Sana coaching · HTML
     background: var(--cream);
   }
   .process-steps {
-    display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 20px;
     position: relative;
   }
   .process-steps::before {
     content: '';
     position: absolute; top: 36px; left: 10%; right: 10%;
     height: 1px; background: linear-gradient(to right, transparent, var(--dusty-rose), transparent);
+    display: none;
   }
   .process-step { text-align: center; position: relative; z-index: 1; }
   .step-num {
@@ -729,7 +730,8 @@ Sana coaching · HTML
   <div class="section-inner">
     <div class="section-eyebrow">セッションの流れ</div>
     <h2 class="section-title">安心して、一歩ずつ。</h2>
-    <p style="text-align:center; font-size:13px; color:var(--mid-gray); letter-spacing:0.05em; margin-bottom:40px;">すべてオンライン（Zoom）で行います。全国どこからでもご参加いただけます。</p>
+    <p style="text-align:center; font-size:13px; color:var(--mid-gray); letter-spacing:0.05em; margin-bottom:8px;">すべてオンライン（Zoom）で行います。全国どこからでもご参加いただけます。</p>
+    <p style="text-align:center; font-size:12px; color:var(--light-gray); letter-spacing:0.03em; margin-bottom:40px;">対応時間：平日 10:00〜／13:30〜／15:30〜（この時間帯が難しい場合はご相談ください）</p>
     <div class="process-steps">
       <div class="process-step">
         <div class="step-num">1</div>
@@ -738,21 +740,26 @@ Sana coaching · HTML
       </div>
       <div class="process-step">
         <div class="step-num">2</div>
+        <div class="step-title">お支払い・日程調整</div>
+        <div class="step-desc">セッションを受けることが決まったら、その場でお支払いと日程の調整を行います。</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
         <div class="step-title">ヒアリング</div>
         <div class="step-desc">セッションの中で、今の状況やお悩みをじっくりお聞きします。</div>
       </div>
       <div class="process-step">
-        <div class="step-num">3</div>
+        <div class="step-num">4</div>
         <div class="step-title">思い込みの特定</div>
         <div class="step-desc">悩みの奥にある潜在意識のパターンを、対話を通じて丁寧に探っていきます。</div>
       </div>
       <div class="process-step">
-        <div class="step-num">4</div>
+        <div class="step-num">5</div>
         <div class="step-title">気づきと手放し</div>
         <div class="step-desc">「なぜそう感じてきたか」が見えると、自然と手放せるようになります。</div>
       </div>
       <div class="process-step">
-        <div class="step-num">5</div>
+        <div class="step-num">6</div>
         <div class="step-title">新しい自分へ</div>
         <div class="step-desc">新しい思考パターンを育て、自分らしい選択ができる毎日へ。</div>
       </div>
