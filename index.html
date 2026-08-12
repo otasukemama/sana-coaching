@@ -2,6 +2,10 @@
 
 
 Sana coaching · HTML
+ 
+ 
+ 
+Sana coaching · HTML
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -45,10 +49,13 @@ Sana coaching · HTML
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(201,149,122,0.15);
   }
-  .nav-logo {
-    display: flex; align-items: center;
-  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
   .nav-logo svg { display: block; width: 30px; height: 30px; }
+  .nav-logo span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px; font-style: italic; font-weight: 400;
+    letter-spacing: 0.03em; white-space: nowrap;
+  }
   .footer-logo svg { display: block; width: 34px; height: 34px; }
   .nav-links {
     display: flex; gap: 36px; list-style: none;
@@ -526,6 +533,7 @@ Sana coaching · HTML
  
   @media (max-width: 768px) {
     nav { padding: 16px 24px; }
+    .nav-logo span { font-size: 13px; }
     .nav-links { display: none; }
     section { padding: 64px 24px; }
     .hero { padding: 100px 24px 64px; }
@@ -555,6 +563,7 @@ Sana coaching · HTML
       <circle cx="16" cy="13.07" r="8"/>
       <circle cx="24" cy="13.07" r="8"/>
     </svg>
+    <span>Sakura Bloom Coaching</span>
   </div>
   <ul class="nav-links">
     <li><a href="#worries">こんな悩みに</a></li>
@@ -571,7 +580,7 @@ Sana coaching · HTML
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
-      <div class="hero-eyebrow">潜在意識コーチング</div>
+      <div class="hero-eyebrow">悩めるママのための潜在意識コーチング</div>
       <h1 class="hero-title">
         <span style="white-space: nowrap;"><em>ママの心</em>が変わると、</span><br>
         子どもの未来も<br>
@@ -890,10 +899,11 @@ Sana coaching · HTML
       <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
     </ul>
   </div>
-  <div class="footer-copy">© 2026 Sana Coaching. All rights reserved.</div>
+  <div class="footer-copy">© 2026 Sakura Bloom Coaching. All rights reserved.</div>
 </footer>
  
 </body>
 </html>
  
-
+ 
+ 
