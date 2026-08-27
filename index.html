@@ -370,9 +370,6 @@
     letter-spacing: 0.1em;
   }
  
-  /* ブログ */
-  .blog { background: var(--warm-white); }
- 
   /* 料金 */
   .pricing { background: var(--warm-white); }
   .pricing-grid {
@@ -415,38 +412,6 @@
   .pricing-note {
     font-size: 12px; color: var(--mid-gray);
     line-height: 1.9; margin-top: 18px;
-  }
-  .blog-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-  }
-  .blog-card {
-    background: var(--warm-white);
-    border-radius: 12px; overflow: hidden;
-    transition: all 0.3s;
-    text-decoration: none; color: inherit;
-  }
-  .blog-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
-  }
-  .blog-thumb {
-    height: 160px;
-    background: linear-gradient(135deg, var(--blush), rgba(138,158,140,0.3));
-    display: flex; align-items: center; justify-content: center;
-    font-size: 36px;
-  }
-  .blog-body { padding: 24px; }
-  .blog-tag {
-    font-size: 10px; letter-spacing: 0.2em;
-    color: var(--dusty-rose); margin-bottom: 10px;
-  }
-  .blog-title {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 15px; font-weight: 400;
-    color: var(--charcoal); line-height: 1.7; margin-bottom: 10px;
-  }
-  .blog-excerpt {
-    font-size: 12px; color: var(--mid-gray); line-height: 1.9;
   }
  
   /* CTA */
@@ -545,7 +510,6 @@
     .worry-text { font-size: 13px; line-height: 1.7; }
     .process-steps { grid-template-columns: repeat(2, 1fr); }
     .testimonials-grid { grid-template-columns: 1fr; }
-    .blog-grid { grid-template-columns: 1fr; }
     .footer-inner { flex-direction: column; gap: 32px; }
   }
 </style>
@@ -571,7 +535,6 @@
     <li><a href="#about">潜在意識とは</a></li>
     <li><a href="#sana">自己紹介</a></li>
     <li><a href="#process">セッション</a></li>
-    <li><a href="#blog">ブログ</a></li>
     <li><a href="#contact">お問い合わせ</a></li>
   </ul>
 </nav>
@@ -803,40 +766,6 @@
   </div>
 </section>
  
-<!-- ブログ -->
-<section class="blog" id="blog">
-  <div class="section-inner">
-    <div class="section-eyebrow">ブログ</div>
-    <h2 class="section-title">心のヒントを、<br>ときどきお届けしていきます。</h2>
-    <div class="blog-grid">
-      <a href="https://note.com/sana_coaching" class="blog-card" target="_blank">
-        <div class="blog-thumb">🌱</div>
-        <div class="blog-body">
-          <div class="blog-tag">潜在意識</div>
-          <div class="blog-title">「またやってしまった」の繰り返しが止まらない本当の理由</div>
-          <div class="blog-excerpt">同じパターンを繰り返してしまうのは、意志が弱いからではありません。潜在意識の仕組みを知ると、自分を責めずに済むようになります。</div>
-        </div>
-      </a>
-      <a href="https://note.com/sana_coaching" class="blog-card" target="_blank">
-        <div class="blog-thumb">💕</div>
-        <div class="blog-body">
-          <div class="blog-tag">子育て</div>
-          <div class="blog-title">お母さんが自分を大切にすることが、最高の子育てになる理由</div>
-          <div class="blog-excerpt">「自分より子どもを優先しなきゃ」。その思い込み、少し手放してみませんか？ お母さんが満たされていると、子どもも変わります。</div>
-        </div>
-      </a>
-      <a href="https://note.com/sana_coaching" class="blog-card" target="_blank">
-        <div class="blog-thumb">✨</div>
-        <div class="blog-body">
-          <div class="blog-tag">自己実現</div>
-          <div class="blog-title">「どうせ私には無理」という声の正体と、その手放し方</div>
-          <div class="blog-excerpt">夢を思い描くたびに聞こえてくる「でも…」という声。それはあなたの本音ではなく、幼い頃に学習したただの思い込みです。</div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
- 
 <!-- CTA -->
 <section class="cta" id="contact">
   <div class="cta-title">
@@ -872,7 +801,6 @@
       <li><a href="#about">潜在意識とは</a></li>
       <li><a href="#sana">自己紹介</a></li>
       <li><a href="#process">セッション</a></li>
-      <li><a href="#blog">ブログ</a></li>
       <li><a href="#contact">お問い合わせ</a></li>
       <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
     </ul>
