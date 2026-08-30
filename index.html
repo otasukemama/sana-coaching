@@ -273,50 +273,63 @@
   .about-subconscious {
     background: var(--cream);
   }
-  .about-layout {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  .subconscious-intro {
+    max-width: 640px; margin: 0 auto 64px; text-align: center;
   }
-  .iceberg {
-    display: flex; flex-direction: column; align-items: center; gap: 0;
-    position: relative;
-  }
-  .iceberg-top {
-    width: 110px; height: 48px;
-    background: linear-gradient(135deg, var(--dusty-rose), var(--deep-rose));
-    border-radius: 8px 8px 0 0;
-    display: flex; align-items: center; justify-content: center;
-    color: white; font-size: 12px; letter-spacing: 0.1em;
-    font-family: 'Noto Serif JP', serif;
-  }
-  .iceberg-water {
-    width: 200px; height: 2px;
-    background: rgba(138,158,140,0.4);
-    position: relative;
-  }
-  .iceberg-water::before {
-    content: '〜〜〜〜〜〜〜〜〜';
-    position: absolute; top: -8px; left: 50%; transform: translateX(-50%);
-    color: var(--sage); font-size: 12px; white-space: nowrap;
-    letter-spacing: 2px;
-  }
-  .iceberg-bottom {
-    width: 320px; height: 260px;
-    background: linear-gradient(135deg, rgba(138,158,140,0.3), rgba(92,122,96,0.3));
-    border-radius: 0 0 50% 50%;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center; gap: 8px;
-    color: var(--deep-sage); font-size: 12px; text-align: center;
-    padding: 28px;
-  }
-  .iceberg-bottom strong {
-    font-size: 15px; font-family: 'Noto Serif JP', serif;
-    font-weight: 400; letter-spacing: 0.1em;
-  }
-  .about-text p {
+  .subconscious-intro p {
     font-size: 14px; color: var(--mid-gray);
-    line-height: 2.1; margin-bottom: 20px;
+    line-height: 2.1;
   }
-  .about-text p strong { color: var(--charcoal); font-weight: 500; }
+  .subconscious-block {
+    max-width: 680px; margin: 0 auto 56px;
+  }
+  .subconscious-block-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 19px; font-weight: 400;
+    color: var(--deep-rose); letter-spacing: 0.06em;
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .subconscious-block p {
+    font-size: 14px; color: var(--mid-gray);
+    line-height: 2.1; margin-bottom: 16px;
+  }
+  .subconscious-block p:last-child { margin-bottom: 0; }
+  .subconscious-block p strong {
+    color: var(--charcoal); font-weight: 500;
+  }
+  .subconscious-question {
+    max-width: 680px; margin: 0 auto 48px; text-align: center;
+    background: var(--warm-white);
+    border-radius: 20px; padding: 40px 32px;
+    border: 1px solid rgba(201,149,122,0.15);
+  }
+  .subconscious-question .subconscious-block-title { justify-content: center; }
+  .subconscious-question p {
+    font-size: 14px; color: var(--mid-gray);
+    line-height: 2.1; margin-bottom: 12px;
+  }
+  .iceberg-figure {
+    max-width: 900px; margin: 0 auto 64px;
+    padding: 24px 0;
+  }
+  .iceberg-figure img {
+    display: block; width: 100%; height: auto;
+    border-radius: 16px;
+  }
+  .subconscious-final {
+    max-width: 640px; margin: 0 auto; text-align: center;
+  }
+  .subconscious-final-quote {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px; font-weight: 300;
+    color: var(--deep-rose); line-height: 1.8;
+    letter-spacing: 0.05em; margin: 8px 0 28px;
+  }
+  .subconscious-final p {
+    font-size: 14px; color: var(--mid-gray);
+    line-height: 2.1; margin-bottom: 32px;
+  }
  
   /* Sanaについて */
   .about-sana {
@@ -557,7 +570,9 @@
     .hero-visual { display: none; }
     .worries-grid { grid-template-columns: 1fr; }
    .pricing-grid { grid-template-columns: 1fr; }
-    .about-layout { grid-template-columns: 1fr; }
+    .subconscious-block-title { font-size: 17px; }
+    .subconscious-question { padding: 32px 22px; }
+    .iceberg-figure { padding: 12px 0; }
     .about-sana-layout { grid-template-columns: 1fr; }
     .sana-portrait { max-width: 260px; margin: 0 auto; }
     .worry-item { padding: 18px 20px; gap: 10px; }
@@ -704,33 +719,136 @@
 <!-- 潜在意識とは -->
 <section class="about-subconscious" id="about">
   <div class="section-inner">
-    <div class="about-layout">
-      <div>
-        <div class="section-eyebrow">潜在意識とは</div>
-        <h2 class="section-title" style="margin-bottom: 28px;">あなたの行動の<br>95%を決めているもの。</h2>
-        <div class="iceberg">
-          <div class="iceberg-top">顕在意識（5%）</div>
-          <div class="iceberg-water"></div>
-          <div class="iceberg-bottom">
-            <strong>潜在意識（95%）</strong>
-            <span style="font-size:11px; opacity:0.8;">幼少期の記憶・思い込み<br>感情パターン・信念・価値観</span>
-          </div>
-        </div>
-      </div>
-      <div class="about-text">
-        <p>
-          私たちが「自分で考えて決めている」と思っている行動や感情の多くは、実は<strong>幼い頃に無意識に学習した思い込みやパターン</strong>から生まれています。
-        </p>
-        <p>
-          「私はどうせダメだ」「愛されるためには頑張り続けなければ」「人に迷惑をかけてはいけない」——そんな声が、あなたの心の奥で静かに響いていませんか？
-        </p>
-        <p>
-          潜在意識コーチングでは、この<strong>「見えない思い込み」を一緒に探し、光を当て</strong>ていきます。気づくことで、手放すことができる。手放すことで、新しい選択ができる。
-        </p>
-        <p>
-          そしてお母さんが少しずつ変わっていくと、そのエネルギーはきっと子どもたちにも伝わっていきます。<strong>自由に自己実現できる子どもを育てる</strong>ために、まずお母さん自身が変わることが、大きな一歩になるかもしれません。
-        </p>
-      </div>
+    <div class="section-eyebrow" style="justify-content:center;">潜在意識とは</div>
+    <h2 class="section-title" style="text-align:center; margin-bottom: 40px;">潜在意識とは？</h2>
+
+    <div class="subconscious-intro">
+      <p>
+        頭では分かっているのに、<br>
+        なぜか同じことで悩んでしまう。<br><br>
+        「もっと穏やかに子どもと向き合いたい」<br>
+        「イライラしたくない」<br>
+        「自分のことも大切にしたい」<br>
+        「もっと自分らしく生きたい」<br><br>
+        そう思っているのに、なぜか思うようにいかない。<br><br>
+        そんなとき、もしかするとあなたの中には、<br>
+        自分ではまだ気づいていない心の奥の思いがあるのかもしれません。
+      </p>
+    </div>
+
+    <div class="subconscious-block">
+      <div class="subconscious-block-title">🌿 頭で思っていることと、心の奥にある思い</div>
+      <p>
+        私たちは、<br>
+        「こうしたい」<br>
+        「こうなりたい」<br>
+        と、自分で分かっていることだけで行動しているわけではありません。
+      </p>
+      <p>
+        これまでの経験の中で身につけてきた<strong>考え方や思い込み、感情のパターン</strong>などが、気づかないところで今の自分の反応に影響していることがあります。
+      </p>
+      <p>
+        たとえば、<br>
+        「もっと笑顔で子どもと過ごしたい」<br>
+        と思っているのに、子どもが思うように動かないと、ついイライラしてしまう。
+      </p>
+      <p>
+        その奥には、<br>
+        「ちゃんとしなきゃ」<br>
+        「私が頑張らなきゃ」<br>
+        「迷惑をかけちゃいけない」<br>
+        そんな思いが隠れていることもあります。
+      </p>
+    </div>
+
+    <div class="subconscious-block">
+      <div class="subconscious-block-title">🌊 だからこそ、「行動」だけを変えようとしなくていい</div>
+      <p>
+        「怒らないようにしよう」<br>
+        「もっと頑張ろう」<br>
+        「ポジティブに考えよう」<br>
+        そうやって自分を変えようとしても、なかなかうまくいかないことがあります。
+      </p>
+      <p>
+        そんなときは、<br>
+        「私はどうして、こんなに頑張らなきゃと思うんだろう？」<br>
+        「本当は、どうしたいんだろう？」<br>
+        と、自分の心の奥に目を向けてみる。
+      </p>
+      <p>
+        すると、今まで気づかなかった<strong>自分の思い</strong>が見えてくることがあります。
+      </p>
+    </div>
+
+    <div class="subconscious-question">
+      <div class="subconscious-block-title">🌸 あなたの心の奥には、どんな思いがありますか？</div>
+      <p>ここで、少しだけ立ち止まってみてください。</p>
+      <p>
+        「本当はこうなりたい」と思っているあなたと、<br>
+        「こうしなきゃ」<br>
+        「私が頑張らなきゃ」<br>
+        と思っているあなた。
+      </p>
+      <p style="margin-bottom:0;">もしかしたら、その両方があなたの中にいるのかもしれません。</p>
+    </div>
+
+    <div class="iceberg-figure">
+      <img src="iceberg-diagram.png" alt="頭で考えていることと心の奥にある潜在意識を表す氷山の図解">
+    </div>
+
+    <div class="subconscious-block">
+      <div class="subconscious-block-title">💕 気づくことから、少しずつ変わっていく</div>
+      <p>
+        心の奥にある思い込みは、無理に消そうとする必要はありません。
+      </p>
+      <p>
+        まずは、<br>
+        「私、こんなふうに思っていたんだ」<br>
+        と気づいてあげること。
+      </p>
+      <p>
+        自分の本当の気持ちを理解して、今の自分にもう必要のない思い込みを少しずつ手放していく。
+      </p>
+      <p>
+        すると、<br>
+        自分を責めることが減ったり、<br>
+        気持ちがラクになったり、<br>
+        今までとは違う選択ができるようになったり。<br>
+        そんな小さな変化が始まることがあります。
+      </p>
+    </div>
+
+    <div class="subconscious-block">
+      <div class="subconscious-block-title">🌷 Sakura Bloom Coachingでは</div>
+      <p>
+        私は、あなたの中にある<strong>「答え」</strong>を一緒に探していきます。
+      </p>
+      <p>
+        カウンセリングでも、何かを教える授業でもありません。
+      </p>
+      <p>
+        あなたのお話をじっくり伺いながら、<br>
+        「私は本当はどうしたいんだろう？」<br>
+        を一緒に見つめていきます。
+      </p>
+      <p>
+        そして、心の奥にある思い込みに気づき、<br>
+        必要のなくなったものを、やさしく手放していく。
+      </p>
+      <p style="text-align:center; color:var(--dusty-rose); letter-spacing:0.1em; font-family:'Noto Serif JP', serif; margin-top:28px;">
+        気づき → 手放し → 前進
+      </p>
+      <p style="margin-bottom:0;">その一歩を、一緒に見つけていきましょう。🌿</p>
+    </div>
+
+    <div class="subconscious-final">
+      <div class="subconscious-block-title" style="justify-content:center;">🌸</div>
+      <div class="subconscious-final-quote">あなたの答えは、いつもあなたの中にある。</div>
+      <p>
+        「これ、私のことかもしれない」<br>
+        そう感じた方は、まずはお話ししてみませんか？
+      </p>
+      <a href="#process" class="btn-primary">セッションについて見る</a>
     </div>
   </div>
 </section>
