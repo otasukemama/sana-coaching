@@ -1,3 +1,7 @@
+
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -62,7 +66,7 @@
     transition: color 0.3s;
   }
   .nav-links a:hover { color: var(--deep-rose); }
-
+ 
   /* ハンバーガーメニュー */
   .hamburger {
     display: none;
@@ -83,7 +87,7 @@
   .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
+ 
   .nav-links-mobile {
     display: none;
     position: fixed;
@@ -706,7 +710,7 @@
       </div>
       <div class="worry-item">
         <div class="worry-icon">🌸</div>
-        <div class="worry-text"><strong>妊活がうまくいかない・赤ちゃんを迎えたい</strong><br>「自分に母親としての資格があるのか」「本当に望んでいいのか」——そんな気づいていない心の奥の不安を抱えている</div>
+        <div class="worry-text"><strong>妊活がうまくいかない・赤ちゃんを迎えたい</strong><br>「自分に母親としての資格があるのか」「本当に望んでいいのか」——気づいていない潜在意識の不安が、身体にも影響しているかもしれない</div>
       </div>
       <div class="worry-item">
         <div class="worry-icon">🤱</div>
@@ -721,7 +725,7 @@
   <div class="section-inner">
     <div class="section-eyebrow" style="justify-content:center;">潜在意識とは</div>
     <h2 class="section-title" style="text-align:center; margin-bottom: 40px;">潜在意識とは？</h2>
-
+ 
     <div class="subconscious-intro">
       <p>
         頭では分かっているのに、<br>
@@ -729,14 +733,15 @@
         そして、<br>
         「もっと穏やかに子どもと向き合いたい」<br>
         「イライラしたくない」<br>
-        「自分のことも大切にしたい」
+        「自分のことも大切にしたい」<br><br>
+        そんな気持ちの奥で、実はこんなことが起きているのかもしれません。
       </p>
     </div>
-
+ 
     <div class="iceberg-figure">
       <img src="iceberg-diagram2.png" alt="頭で思っていることと心の奥にある思いの違いを表す氷山の図解">
     </div>
-
+ 
     <div class="subconscious-block">
       <div class="subconscious-block-title">🌿 頭で思っていることと、心の奥にある思い</div>
       <p>
@@ -761,7 +766,7 @@
         そんな思いが隠れていることもあります。
       </p>
     </div>
-
+ 
     <div class="subconscious-block">
       <div class="subconscious-block-title">🌊 だからこそ、「行動」だけを変えようとしなくていい</div>
       <p>
@@ -780,7 +785,7 @@
         すると、今まで気づかなかった<strong>自分の思い</strong>が見えてくることがあります。
       </p>
     </div>
-
+ 
     <div class="subconscious-question">
       <div class="subconscious-block-title">🌸 あなたの心の奥には、どんな思いがありますか？</div>
       <p>ここで、少しだけ立ち止まってみてください。</p>
@@ -792,7 +797,7 @@
       </p>
       <p style="margin-bottom:0;">もしかしたら、その両方があなたの中にいるのかもしれません。</p>
     </div>
-
+ 
     <div class="subconscious-block">
       <div class="subconscious-block-title">💕 気づくことから、少しずつ変わっていく</div>
       <p>
@@ -814,7 +819,7 @@
         そんな小さな変化が始まることがあります。
       </p>
     </div>
-
+ 
     <div class="subconscious-block">
       <div class="subconscious-block-title">🌷 Sakura Bloom Coachingでは</div>
       <p>
@@ -837,7 +842,7 @@
       </p>
       <p style="margin-bottom:0;">その一歩を、一緒に見つけていきましょう。🌿</p>
     </div>
-
+ 
     <div class="subconscious-final">
       <div class="subconscious-block-title" style="justify-content:center;">🌸</div>
       <div class="subconscious-final-quote">あなたの答えは、いつもあなたの中にある。</div>
@@ -997,24 +1002,25 @@
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const navLinksMobile = document.getElementById('navLinksMobile');
   const navOverlay = document.getElementById('navOverlay');
-
+ 
   function closeMenu() {
     hamburgerBtn.classList.remove('open');
     navLinksMobile.classList.remove('open');
     navOverlay.classList.remove('open');
   }
-
+ 
   hamburgerBtn.addEventListener('click', () => {
     hamburgerBtn.classList.toggle('open');
     navLinksMobile.classList.toggle('open');
     navOverlay.classList.toggle('open');
   });
-
+ 
   navOverlay.addEventListener('click', closeMenu);
-
+ 
   navLinksMobile.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
 </script>
 </body>
 </html>
+ 
