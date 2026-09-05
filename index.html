@@ -1,4 +1,3 @@
-Index · HTML
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -63,7 +62,7 @@ Index · HTML
     transition: color 0.3s;
   }
   .nav-links a:hover { color: var(--deep-rose); }
- 
+
   /* ハンバーガーメニュー */
   .hamburger {
     display: none;
@@ -84,7 +83,7 @@ Index · HTML
   .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
- 
+
   .nav-links-mobile {
     display: none;
     position: fixed;
@@ -702,7 +701,7 @@ Index · HTML
   <div class="section-inner">
     <div class="section-eyebrow" style="justify-content:center;">潜在意識とは</div>
     <h2 class="section-title" style="text-align:center; margin-bottom: 40px;">潜在意識とは？</h2>
- 
+
     <div class="subconscious-intro">
       <p>
         頭では分かっているのに、<br>
@@ -714,11 +713,11 @@ Index · HTML
         そんな気持ちの奥で、実はこんなことが起きているのかもしれません。
       </p>
     </div>
- 
+
     <div class="iceberg-figure">
       <img src="iceberg-diagram2.png" alt="頭で思っていることと心の奥にある思いの違いを表す氷山の図解">
     </div>
- 
+
     <div class="subconscious-block">
       <div class="subconscious-block-title">🌿 頭で思っていることと、心の奥にある思い</div>
       <p>
@@ -729,7 +728,7 @@ Index · HTML
         これまでの経験の中で身につけてきた<strong>考え方や思い込み、感情のパターン</strong>などが、気づかないところで今の自分の反応に影響していることがあります。
       </p>
     </div>
- 
+
     <div class="subconscious-block">
       <div class="subconscious-block-title">🌊 だからこそ、頑張って変えようとしなくてもいい</div>
       <p>
@@ -741,7 +740,7 @@ Index · HTML
         すると、今まで気づかなかった<strong>自分の思い</strong>が見えてくることがあります。
       </p>
     </div>
- 
+
     <div class="subconscious-block">
       <div class="subconscious-block-title">💕 気づくことから、少しずつ変わっていく</div>
       <p>
@@ -756,7 +755,7 @@ Index · HTML
         そんな小さな変化が始まることがあります。
       </p>
     </div>
- 
+
     <div class="subconscious-block">
       <div class="subconscious-block-title">🌷 Sakura Bloom Coachingでは</div>
       <p>
@@ -840,7 +839,7 @@ Index · HTML
           <p style="font-size:13px; color:var(--mid-gray); margin-bottom: 6px;">約90分・Zoom</p>
           <p style="font-size:12px; color:var(--dusty-rose); letter-spacing:0.08em;">※10月末までの期間限定価格</p>
         </div>
-        <p style="font-size:13px; color:var(--mid-gray); line-height:2; margin-top: 28px; padding-top: 28px; border-top: 1px solid rgba(201,149,122,0.15);">
+        <p style="font-size:12px; color:var(--mid-gray); line-height:2; margin-top: 28px; padding-top: 28px; border-top: 1px solid rgba(201,149,122,0.15);">
           これからSakura Bloom Coachingを一緒に育ててくださるモニターさんを募集しています。<br>
           セッション後には、よろしければご感想をお聞かせください。
         </p>
@@ -895,25 +894,24 @@ Index · HTML
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const navLinksMobile = document.getElementById('navLinksMobile');
   const navOverlay = document.getElementById('navOverlay');
- 
+
   function closeMenu() {
     hamburgerBtn.classList.remove('open');
     navLinksMobile.classList.remove('open');
     navOverlay.classList.remove('open');
   }
- 
+
   hamburgerBtn.addEventListener('click', () => {
     hamburgerBtn.classList.toggle('open');
     navLinksMobile.classList.toggle('open');
     navOverlay.classList.toggle('open');
   });
- 
+
   navOverlay.addEventListener('click', closeMenu);
- 
+
   navLinksMobile.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
 </script>
 </body>
 </html>
- 
