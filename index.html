@@ -1,11 +1,12 @@
+Index · HTML
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>悩めるママ・プレママのための潜在意識コーチング</title>
+<title>悩めるママ・プレママのための潜在意識セッション</title>
   <meta property="og:image" content="https://sakura-bloom-coaching.vercel.app/og-image.png">
-<meta property="og:title" content="悩めるママ・プレママのための潜在意識コーチング">
+<meta property="og:title" content="悩めるママ・プレママのための潜在意識セッション">
 <meta property="og:description" content="10月末までモニター価格3,000円でセッションを受け付けています">
 <meta property="og:url" content="https://sakura-bloom-coaching.vercel.app">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
@@ -62,7 +63,7 @@
     transition: color 0.3s;
   }
   .nav-links a:hover { color: var(--deep-rose); }
-
+ 
   /* ハンバーガーメニュー */
   .hamburger {
     display: none;
@@ -83,7 +84,7 @@
   .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
+ 
   .nav-links-mobile {
     display: none;
     position: fixed;
@@ -375,6 +376,7 @@
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 20px;
     position: relative;
   }
+  .process-steps.three { grid-template-columns: repeat(3, 1fr); }
   .process-steps::before {
     content: '';
     position: absolute; top: 36px; left: 10%; right: 10%;
@@ -404,6 +406,21 @@
   }
   .step-desc {
     font-size: 12px; color: var(--mid-gray); line-height: 1.9;
+  }
+  .flow-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px; font-weight: 400;
+    color: var(--deep-rose); letter-spacing: 0.08em;
+    margin: 56px 0 32px;
+  }
+  .session-note {
+    font-size: 12px; color: var(--mid-gray);
+    line-height: 2; margin-top: 16px;
+  }
+  .disclaimer {
+    max-width: 560px; margin: 40px auto 0;
+    font-size: 11px; color: var(--light-gray);
+    line-height: 2; letter-spacing: 0.03em;
   }
  
   /* こんな変化が期待できます */
@@ -576,6 +593,7 @@
     .worry-icon { font-size: 17px; }
     .worry-text { font-size: 13px; line-height: 1.7; }
     .process-steps { grid-template-columns: repeat(2, 1fr); }
+    .process-steps.three { grid-template-columns: 1fr; }
     .testimonials-grid { grid-template-columns: 1fr; }
     .footer-inner { flex-direction: column; gap: 32px; }
   }
@@ -599,14 +617,14 @@
       <circle cx="16" cy="13.07" r="8"/>
       <circle cx="24" cy="13.07" r="8"/>
     </svg>
-    <span>Sakura Bloom Coaching</span>
+    <span>Sakura Bloom</span>
   </div>
   <ul class="nav-links">
     <li><a href="#worries">こんな悩みに</a></li>
     <li><a href="#about">潜在意識とは</a></li>
     <li><a href="#sana">自己紹介</a></li>
     <li><a href="#process">セッション</a></li>
-    <li><a href="mailto:sana.coaching23@gmail.com?subject=お問い合わせ（Sakura%20Bloom%20Coaching）&body=はじめまして。%0D%0A以下、よろしくお願いいたします。%0D%0A%0D%0A【お名前】%0D%0A%0D%0A%0D%0A【ご質問・ご相談内容】%0D%0A%0D%0A%0D%0A%0D%0A※お返事まで数日いただく場合がございます。">お問い合わせ</a></li>
+    <li><a href="mailto:sana.coaching23@gmail.com?subject=お問い合わせ（Sakura%20Bloom）&body=はじめまして。%0D%0A以下、よろしくお願いいたします。%0D%0A%0D%0A【お名前】%0D%0A%0D%0A%0D%0A【ご質問・ご相談内容】%0D%0A%0D%0A%0D%0A%0D%0A※お返事まで数日いただく場合がございます。">お問い合わせ</a></li>
   </ul>
   <button class="hamburger" id="hamburgerBtn" aria-label="メニューを開く">
     <span></span><span></span><span></span>
@@ -618,14 +636,14 @@
   <li><a href="#about">潜在意識とは</a></li>
   <li><a href="#sana">自己紹介</a></li>
   <li><a href="#process">セッション</a></li>
-  <li><a href="mailto:sana.coaching23@gmail.com?subject=お問い合わせ（Sakura%20Bloom%20Coaching）&body=はじめまして。%0D%0A以下、よろしくお願いいたします。%0D%0A%0D%0A【お名前】%0D%0A%0D%0A%0D%0A【ご質問・ご相談内容】%0D%0A%0D%0A%0D%0A%0D%0A※お返事まで数日いただく場合がございます。">お問い合わせ</a></li>
+  <li><a href="mailto:sana.coaching23@gmail.com?subject=お問い合わせ（Sakura%20Bloom）&body=はじめまして。%0D%0A以下、よろしくお願いいたします。%0D%0A%0D%0A【お名前】%0D%0A%0D%0A%0D%0A【ご質問・ご相談内容】%0D%0A%0D%0A%0D%0A%0D%0A※お返事まで数日いただく場合がございます。">お問い合わせ</a></li>
 </ul>
  
 <!-- ヒーロー -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
-      <div class="hero-eyebrow">悩めるママ・プレママのための潜在意識コーチング</div>
+      <div class="hero-eyebrow">悩めるママ・プレママのための潜在意識セッション</div>
       <h1 class="hero-title">
         <span style="white-space: nowrap;"><em>ママの心</em>が変わると、</span><br>
         子どもの未来も<br>
@@ -705,7 +723,7 @@
   <div class="section-inner">
     <div class="section-eyebrow" style="justify-content:center;">潜在意識とは</div>
     <h2 class="section-title" style="text-align:center; margin-bottom: 40px;">潜在意識とは？</h2>
-
+ 
     <div class="subconscious-intro">
       <p>
         頭では分かっているのに、<br>
@@ -717,11 +735,11 @@
         そんな気持ちの奥で、実はこんなことが起きているのかもしれません。
       </p>
     </div>
-
+ 
     <div class="iceberg-figure">
       <img src="iceberg-diagram2.png" alt="頭で思っていることと心の奥にある思いの違いを表す氷山の図解">
     </div>
-
+ 
     <div class="subconscious-block">
       <div class="subconscious-block-title">🌿 頭で思っていることと、心の奥にある思い</div>
       <p>
@@ -732,7 +750,7 @@
         これまでの経験の中で身につけてきた<strong>考え方や思い込み、感情のパターン</strong>などが、気づかないところで今の自分の反応に影響していることがあります。
       </p>
     </div>
-
+ 
     <div class="subconscious-block">
       <div class="subconscious-block-title">🌊 だからこそ、頑張って変えようとしなくてもいい</div>
       <p>
@@ -744,7 +762,7 @@
         すると、今まで気づかなかった<strong>自分の思い</strong>が見えてくることがあります。
       </p>
     </div>
-
+ 
     <div class="subconscious-block">
       <div class="subconscious-block-title">💕 気づくことから、少しずつ変わっていく</div>
       <p>
@@ -759,9 +777,9 @@
         そんな小さな変化が始まることがあります。
       </p>
     </div>
-
+ 
     <div class="subconscious-block">
-      <div class="subconscious-block-title">🌷 Sakura Bloom Coachingでは</div>
+      <div class="subconscious-block-title">🌷 Sakura Bloomでは</div>
       <p>
         あなたのお話をじっくり伺いながら、<br>
         「私は本当はどうしたいんだろう？」<br>
@@ -802,10 +820,10 @@
           反省ばかりの毎日を送り、「どうしてこうなるんだろう」と思うことが多い中、潜在意識のことを知り、自分の心の奥に目を向けるようになりました。すると、子どものころからの経験の中で身につけてきた思い込みが、今の自分の反応や状況に影響していることが分かりました。
         </p>
         <p class="sana-desc">
-          もっと早く知りたかった——そんな思いから、同じような悩みをもつ方々にもこのことをお伝えしたくて、Sakura Bloom Coachingを始めました。
+          もっと早く知りたかった——そんな思いから、同じような悩みをもつ方々にもこのことをお伝えしたくて、Sakura Bloomを始めました。
         </p>
         <div class="sana-tags">
-          <span class="sana-tag">潜在意識コーチング</span>
+          <span class="sana-tag">潜在意識セッション</span>
           <span class="sana-tag">子育て</span>
           <span class="sana-tag">自分らしさ</span>
           <span class="sana-tag">家族関係</span>
@@ -831,6 +849,10 @@
         今の自分にはもう必要のない思いを、<br>
         少しずつ手放していきましょう。
       </p>
+      <p class="session-note" style="margin-top: -12px; margin-bottom: 40px;">
+        お話を中心に進めます。必要に応じて、からだの感覚などを用いた技法も取り入れながら、今の悩みにつながっている思い込みや、幼いころの経験なども一緒に探っていきます。<br>
+        ご自身では気づいていなかった思いに出会うことで、新しい視点が見つかることもあります。
+      </p>
       <p style="font-size:14px; color:var(--dusty-rose); letter-spacing:0.1em; margin-bottom: 48px; font-family: 'Noto Serif JP', serif;">
         「こうしなきゃ」ではなく、<br>
         「私はこうしたい」と思える自分へ。
@@ -844,11 +866,31 @@
           <p style="font-size:12px; color:var(--dusty-rose); letter-spacing:0.08em;">※10月末までの期間限定価格</p>
         </div>
         <p style="font-size:12px; color:var(--mid-gray); line-height:2; margin-top: 28px; padding-top: 28px; border-top: 1px solid rgba(201,149,122,0.15);">
-          これからSakura Bloom Coachingを一緒に育ててくださるモニターさんを募集しています。<br>
+          これからSakura Bloomを一緒に育ててくださるモニターさんを募集しています。<br>
           セッション後には、よろしければご感想をお聞かせください。
         </p>
       </div>
-      <p style="font-size:14px; color:var(--mid-gray); line-height:2.2; margin-top: 40px;">
+ 
+      <h3 class="flow-title">セッションの流れ</h3>
+      <div class="process-steps three">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-title">お申し込み</div>
+          <div class="step-desc">フォームから<br>お申し込みください。</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-title">日程調整・お支払い</div>
+          <div class="step-desc">日程をご相談のうえ、<br>事前にお支払いをお願いします。</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-title">Zoomでセッション</div>
+          <div class="step-desc">約90分。お話を伺いながら、思い込みに気づき、手放していきます。</div>
+        </div>
+      </div>
+ 
+      <p style="font-size:14px; color:var(--mid-gray); line-height:2.2; margin-top: 56px;">
         「これ、私のことかもしれない」<br>
         「ちょっと話してみたい」<br>
         そう思ったら、それだけで十分です。<br><br>
@@ -858,6 +900,9 @@
       <div style="margin-top: 32px;">
         <a href="https://forms.gle/NgYSvGU6ph8bAqFp7" class="btn-primary" target="_blank">期間限定¥3,000 モニターセッションを申し込む →</a>
       </div>
+      <p class="disclaimer">
+        ※セッションは医療行為・心理療法ではなく、診断や治療に代わるものではありません。心身の不調が強いときは、医療機関や専門機関へのご相談もおすすめします。
+      </p>
     </div>
   </div>
 </section>
@@ -880,45 +925,47 @@
           <circle cx="24" cy="13.07" r="8"/>
         </svg>
       </div>
-      <div class="footer-tagline">悩めるママ・プレママのための潜在意識コーチング</div>
+      <div class="footer-tagline">悩めるママ・プレママのための潜在意識セッション</div>
     </div>
     <ul class="footer-links">
       <li><a href="#worries">こんな悩みに</a></li>
       <li><a href="#about">潜在意識とは</a></li>
       <li><a href="#sana">自己紹介</a></li>
       <li><a href="#process">セッション</a></li>
-      <li><a href="mailto:sana.coaching23@gmail.com?subject=お問い合わせ（Sakura%20Bloom%20Coaching）&body=はじめまして。%0D%0A以下、よろしくお願いいたします。%0D%0A%0D%0A【お名前】%0D%0A%0D%0A%0D%0A【ご質問・ご相談内容】%0D%0A%0D%0A%0D%0A%0D%0A※お返事まで数日いただく場合がございます。">お問い合わせ</a></li>
+      <li><a href="mailto:sana.coaching23@gmail.com?subject=お問い合わせ（Sakura%20Bloom）&body=はじめまして。%0D%0A以下、よろしくお願いいたします。%0D%0A%0D%0A【お名前】%0D%0A%0D%0A%0D%0A【ご質問・ご相談内容】%0D%0A%0D%0A%0D%0A%0D%0A※お返事まで数日いただく場合がございます。">お問い合わせ</a></li>
       <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
       <li><a href="privacy.html">プライバシーポリシー</a></li>
       <li><a href="terms.html">利用規約</a></li>
       
     </ul>
   </div>
-  <div class="footer-copy">© 2026 Sakura Bloom Coaching. All rights reserved.</div>
+  <div class="footer-copy">© 2026 Sakura Bloom. All rights reserved.</div>
 </footer>
  
 <script>
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const navLinksMobile = document.getElementById('navLinksMobile');
   const navOverlay = document.getElementById('navOverlay');
-
+ 
   function closeMenu() {
     hamburgerBtn.classList.remove('open');
     navLinksMobile.classList.remove('open');
     navOverlay.classList.remove('open');
   }
-
+ 
   hamburgerBtn.addEventListener('click', () => {
     hamburgerBtn.classList.toggle('open');
     navLinksMobile.classList.toggle('open');
     navOverlay.classList.toggle('open');
   });
-
+ 
   navOverlay.addEventListener('click', closeMenu);
-
+ 
   navLinksMobile.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
 </script>
 </body>
 </html>
+ 
+Claudeが応答中です
